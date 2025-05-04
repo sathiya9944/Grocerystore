@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo-container">
+                <img src="logo.png" alt="BigBasket" class="logo">
+                <span class="logo-text">A TATA Enterprise</span>
+            </div>
+            <div class="search-bar">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="Search for Products...">
+            </div>
+            <div class="location-selector">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Select Location</span>
+            </div>
+            <div class="login-button">
+                Login/ Sign Up
+            </div>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="category-dropdown">
+                <button class="dropdown-btn">Shop by Category <i class="fas fa-chevron-down"></i></button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Exotic Fruits & V...</a></li>
+                <li><a href="#">Tea</a></li>
+                <li><a href="#">Ghee</a></li>
+                <li><a href="#">Nandini</a></li>
+                <li><a href="#">Fresh Vegetables</a></li>
+                <li><a href="#" class="more-link"><i class="fas fa-chevron-right"></i></a></li>
+            </ul>
+            <div class="special-offers">
+                <div class="smart-basket-icon">
+                    <img src="images/smart-basket.png" alt="Smart Basket">
+                    <span>Smart basket</span>
+                </div>
+                <div class="offers-icon">
+                    <i class="fas fa-tag"></i>
+                    <span>Offers</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="smart-basket-section">
+            <div class="section-header">
+                <h2>My Smart Basket</h2>
+                <div class="view-controls">
+                    <a href="#" class="view-all">View All</a>
+                    <div class="carousel-controls">
+                        <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-carousel">
+                <div class="product-card" data-id="1" data-price="35.50">
+                    <div class="discount-tag">47% OFF</div>
+                    <div class="product-image">
+                        <img src="cap.jpg" alt="Capsicum">
+                    </div>
+                    <div class="product-info">
+                        <span class="brand">fresho!</span>
+                        <h3 class="product-name">Capsicum - Green (Loose)</h3>
+                        <div class="quantity-selector">
+                            <select class="qty-select">
+                                <option value="1">1 kg</option>
+                                <option value="2">2 kg</option>
+                                <option value="3">3 kg</option>
+                            </select>
+                        </div>
+                        <div class="price">₹35.50</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-id="2" data-price="28.75">
+                    <div class="discount-tag">20% OFF</div>
+                    <div class="product-image">
+                        <img src="carrot.png" alt="Carrot">
+                    </div>
+                    <div class="product-info">
+                        <span class="brand">fresho!</span>
+                        <h3 class="product-name">Carrot - Orange (Loose)</h3>
+                        <div class="quantity-selector">
+                            <select class="qty-select">
+                                <option value="1">1 kg</option>
+                                <option value="2">2 kg</option>
+                                <option value="3">3 kg</option>
+                            </select>
+                        </div>
+                        <div class="price">₹28.75</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-id="3" data-price="42.00">
+                    <div class="discount-tag">20% OFF</div>
+                    <div class="product-image">
+                        <img src="cali.jpg" alt="Cauliflower">
+                    </div>
+                    <div class="product-info">
+                        <span class="brand">fresho!</span>
+                        <h3 class="product-name">Cauliflower</h3>
+                        <div class="quantity-selector">
+                            <select class="qty-select">
+                                <option value="1">1 pc - (approx. 400 to 600 g)</option>
+                                <option value="2">2 pc</option>
+                            </select>
+                        </div>
+                        <div class="price">₹42.00</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-id="4" data-price="15.20">
+                    <div class="discount-tag">20% OFF</div>
+                    <div class="product-image">
+                        <img src="coriander-leaves.jpg" alt="Coriander">
+                    </div>
+                    <div class="product-info">
+                        <span class="brand">fresho!</span>
+                        <h3 class="product-name">Coriander Leaves</h3>
+                        <div class="quantity-selector">
+                            <select class="qty-select">
+                                <option value="1">1 kg</option>
+                                <option value="2">2 kg</option>
+                            </select>
+                        </div>
+                        <div class="price">₹15.20</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart section -->
+        <section class="cart-section">
+            <div class="section-header">
+                <h2>Your Cart</h2>
+                <span class="cart-count">0 items</span>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be added here -->
+            </div>
+            <div class="cart-total">
+                <div class="total-label">Total:</div>
+                <div class="total-amount">₹0.00</div>
+            </div>
+            <button class="checkout-btn" disabled>Proceed to Checkout</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 
