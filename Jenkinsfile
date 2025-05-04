@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKERHUB_CREDENTIALS = dockerhub9944 // Update this with your Jenkins credential ID
         DOCKERHUB_USERNAME = sathiya9944
-        IMAGE_NAME = 'grocery-app'
+        IMAGE_NAME = grocerystore3
     }
 
     stages {
