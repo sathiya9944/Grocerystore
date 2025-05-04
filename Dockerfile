@@ -2,7 +2,7 @@
 FROM node:16-alpine
 
 # Set working directory
-WORKDIR /app
+WORKDIR /grocerystore
 
 # Copy project files
 COPY . .
