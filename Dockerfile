@@ -1,17 +1,18 @@
-# Use the official Node.js image as a base image
+# Use a lightweight Node.js image
 FROM node:16-alpine
 
 # Set working directory
-WORKDIR /grocerystore
+WORKDIR /app
 
-# Copy project files
+# Copy all project files into the container
 COPY . .
 
-# Install a simple HTTP server to serve static files
+# Install http-server globally
 RUN npm install -g http-server
 
 # Expose port 8082
 EXPOSE 8082
 
-# Command to run the application
-CMD ["http-server", "-p", "8082", "-c-1"]
+# Command to run the app
+CMD ["http-server", "-p", "8082"]
+
