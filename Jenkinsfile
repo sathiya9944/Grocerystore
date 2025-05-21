@@ -11,7 +11,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build('grocery-store-app')
+                    docker.build('grocery-static-site')
                 }
             }
         }
@@ -19,7 +19,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 script {
-                    docker.image('grocery-store-app').run('-d -p 8081:80')
+                    docker.image('grocery-static-site').run('-d -p 8081:80')
                 }
             }
         }
