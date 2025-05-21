@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone') {
+        stage('Clone Repository') {
             steps {
                 git 'https://github.com/sathiya9944/Grocerystore.git'
             }
@@ -11,7 +11,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build('grocery')
+                    docker.build('grocery-store-app')
                 }
             }
         }
@@ -19,7 +19,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 script {
-                    docker.image('grocery').run('-d -p 8081:80')
+                    docker.image('grocery-store-app').run('-d -p 8081:80')
                 }
             }
         }
